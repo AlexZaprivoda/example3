@@ -13,10 +13,13 @@
       var c = +prompt("Введи c");
 
       var d = b ** 2 - 4 * a * c;
-
       document.write("<p>Дискриминант: " + d + "</p><br/>");
 
-      if (d < 0) {
+      if (a == 0 || b == 0 || c == 0) {
+        document.write(
+          "<h1>Пора почитать учебник по алгебре за 8 класс ;)</h1>"
+        );
+      } else if (d < 0) {
         document.write("<p>Корней нет</p>");
       } else if (d == 0) {
         var x = (b * -1) / (2 * a);
